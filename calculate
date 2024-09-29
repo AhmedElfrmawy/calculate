@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char op;
+    float num1, num2;
+
+    cout << "أدخل العملية الحسابية (+, -, *, /): ";
+    cin >> op;
+
+    cout << "أدخل الرقمين: ";
+    cin >> num1 >> num2;
+
+    switch(op) {
+        case '+':
+            cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
+            break;
+        case '-':
+            cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
+            break;
+        case '*':
+            cout << num1 << " * " << num2 << " = " << num1 * num2 << endl;
+            break;
+        case '/':
+            if(num2 != 0)
+                cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
+            else
+                cout << "لا يمكن القسمة على الصفر!" << endl;
+            break;
+        default:
+            cout << "العملية غير صحيحة!" << endl;
+            break;
+    }
+
+    return 0;
+}
